@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminArticleController;
 use App\Http\Controllers\AdminOdpController;
+use App\Http\Controllers\AdminProdHukumController;
 use App\Http\Controllers\AdminSoloEventController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,4 +57,20 @@ Route::get('/admin/odplink/add', [AdminOdpController::class, 'add']);
 Route::post('/admin/odplink/add', [AdminOdpController::class, 'create'])->name('addOpdLink');
 Route::get('/admin/odplink/edit/{id}', [AdminOdpController::class, 'edit'])->name('editOpdLink');
 Route::post('/admin/odplink/update', [AdminOdpController::class, 'update'])->name('updateOpdLink');
-Route::get('/admin/odplink/delete/{id}', [AdminOdpController::class, 'delete'])->name('deleteOpdLink');;
+Route::get('/admin/odplink/delete/{id}', [AdminOdpController::class, 'delete'])->name('deleteOpdLink');
+
+
+Route::get('/admin/article', [AdminArticleController::class, 'index'])->name('indexArticle');
+Route::get('/admin/article/add', [AdminArticleController::class, 'add'])->name('addviewArticle');
+Route::post('/admin/article/add', [AdminArticleController::class, 'create'])->name('addArticle');
+Route::get('/admin/article/edit/{id}', [AdminArticleController::class, 'edit'])->name('editArticle');
+Route::post('/admin/article/update', [AdminArticleController::class, 'update'])->name('updateArticle');
+Route::get('/admin/article/delete/{id}', [AdminArticleController::class, 'delete'])->name('deleteArticle');
+
+
+Route::get('/admin/prodhukum', [AdminProdHukumController::class, 'index'])->name('indexProdHukum');
+Route::get('/admin/prodhukum/add', [AdminProdHukumController::class, 'add'])->name('addviewProdHukum');
+Route::post('/admin/prodhukum/add', [AdminProdHukumController::class, 'create'])->name('addProdHukum');
+Route::get('/admin/prodhukum/edit/{id}', [AdminProdHukumController::class, 'edit'])->name('editProdHukum');
+Route::post('/admin/prodhukum/update', [AdminProdHukumController::class, 'update'])->name('updateProdHukum');
+Route::get('/admin/prodhukum/delete/{id}', [AdminProdHukumController::class, 'delete'])->name('deleteProdHukum');

@@ -48,7 +48,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Solo Events</li>
+                                <li class="breadcrumb-item active">Product Hukum</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -67,46 +67,27 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="{{route('addSoloEvent')}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('updateProdHukum')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
+                                        <input name="id" type="text" class="form-control" id="exampleJudulBerita" value="{{$data->id}}">
                                         <div class="form-group">
-                                            <label for="exampleJudulBerita">Judul Berita</label>
-                                            <input name="title" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Judul Berita">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Masukkan Start Periode</label>
-                                            <input name="start_periode" type="date" class="form-control" id="exampleInputPassword1" placeholder="Start Periode" value="{{date('Y-m-d')}}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Masukkan End Periode</label>
-                                            <input name="end_periode" type="date" class="form-control" id="exampleInputPassword1" placeholder="End Periode" value="{{date('Y-m-d')}}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleJudulBerita">Lokasi</label>
-                                            <input name="location" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Lokasi">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Deskripsi</label>
-                                            <textarea name="description" class="form-control" rows="3" placeholder="Masukkan Deskripsi ..."></textarea>
+                                            <label for="exampleJudulBerita">Judul File</label>
+                                            <input name="title" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Judul Berita" value="{{$data->title}}">
                                         </div>
                                         <div class="form-group">
                                             <!-- <label for="customFile">Custom File</label> -->
 
                                             <div class="custom-file">
-                                                <input name="image_url" type="file" class="custom-file-input" id="customFile" accept="image/*">
-                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                                <input name="image_url" type="file" class="custom-file-input" id="customFile" accept="file/pdf">
+                                                <label class="custom-file-label" for="customFile">{{$data->file_url}}</label>
                                             </div>
-                                        </div>
-                                        <div class="form-check">
-                                            <input name="is_galerysoloevent" type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Simpan sebagai Galery Solo Events</label>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
 
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </form>
                             </div>

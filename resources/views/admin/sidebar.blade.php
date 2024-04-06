@@ -51,6 +51,23 @@
                            </p>
                        </a>
                    </li>
+                   <li class="nav-item">
+                       <a href="{{route('indexArticle')}}" class="nav-link">
+                           <i class="nav-icon far fa-copy"></i>
+                           <p>
+                               Article
+                           </p>
+                       </a>
+                   </li>
+
+                   <li class="nav-item">
+                       <a href="{{route('indexProdHukum')}}" class="nav-link">
+                           <i class="nav-icon far fa-copy"></i>
+                           <p>
+                               Product Hukum
+                           </p>
+                       </a>
+                   </li>
                </ul>
            </nav>
            <!-- /.sidebar-menu -->

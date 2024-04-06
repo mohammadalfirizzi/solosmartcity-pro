@@ -43,7 +43,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Solo Event</h1>
+                            <h1 class="m-0">Produk Hukum</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -63,45 +63,26 @@
                         <div class="col-md-12">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Solo Event</h3>
+                                    <h3 class="card-title">Produk Hukum</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="{{route('addSoloEvent')}}" method="POST" enctype="multipart/form-data">
+                                <form action="{{route('addProdHukum')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="exampleJudulBerita">Judul Berita</label>
-                                            <input name="title" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Judul Berita">
+                                            <label for="exampleJudulBerita">Judul Hukum</label>
+                                            <input name="title" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Judul OPD">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputPassword1">Masukkan Start Periode</label>
-                                            <input name="start_periode" type="date" class="form-control" id="exampleInputPassword1" placeholder="Start Periode" value="{{date('Y-m-d')}}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Masukkan End Periode</label>
-                                            <input name="end_periode" type="date" class="form-control" id="exampleInputPassword1" placeholder="End Periode" value="{{date('Y-m-d')}}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleJudulBerita">Lokasi</label>
-                                            <input name="location" type="text" class="form-control" id="exampleJudulBerita" placeholder="Masukkan Lokasi">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Deskripsi</label>
-                                            <textarea name="description" class="form-control" rows="3" placeholder="Masukkan Deskripsi ..."></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <!-- <label for="customFile">Custom File</label> -->
+                                            <label for="customFile">Tambahkan File</label>
 
                                             <div class="custom-file">
-                                                <input name="image_url" type="file" class="custom-file-input" id="customFile" accept="image/*">
+                                                <input name="file_url" type="file" class="custom-file-input" id="customFile" accept="file/pdf">
                                                 <label class="custom-file-label" for="customFile">Choose file</label>
                                             </div>
                                         </div>
-                                        <div class="form-check">
-                                            <input name="is_galerysoloevent" type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Simpan sebagai Galery Solo Events</label>
-                                        </div>
+
                                     </div>
                                     <!-- /.card-body -->
 
