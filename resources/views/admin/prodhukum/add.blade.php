@@ -78,7 +78,7 @@
                                             <label for="customFile">Tambahkan File</label>
 
                                             <div class="custom-file">
-                                                <input name="file_url" type="file" class="custom-file-input" id="customFile" accept="file/pdf">
+                                                <input name="file_url" type="file" class="custom-file-input" id="customFile" accept="application/pdf">
                                                 <label class="custom-file-label" for="customFile">Choose file</label>
                                             </div>
                                         </div>
