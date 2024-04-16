@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminArticleController;
 use App\Http\Controllers\AdminOdpController;
 use App\Http\Controllers\AdminProdHukumController;
 use App\Http\Controllers\AdminSoloEventController;
+use App\Http\Controllers\dimensiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,3 +75,10 @@ Route::post('/admin/prodhukum/add', [AdminProdHukumController::class, 'create'])
 Route::get('/admin/prodhukum/edit/{id}', [AdminProdHukumController::class, 'edit'])->name('editProdHukum');
 Route::post('/admin/prodhukum/update', [AdminProdHukumController::class, 'update'])->name('updateProdHukum');
 Route::get('/admin/prodhukum/delete/{id}', [AdminProdHukumController::class, 'delete'])->name('deleteProdHukum');
+
+
+//Search
+Route::get('/search/dimensi', [dimensiController::class, 'search'])->name('searchDimensi');
+
+//Pagination
+Route::get('/pagination/fetch_data', [dimensiController::class, 'fetch_data'])->name('fetch_data');

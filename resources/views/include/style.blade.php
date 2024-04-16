@@ -2,6 +2,36 @@
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+<style>
+    .page-item:first-child .page-link {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #1e1e1e;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+
+    .page-item:not(:first-child) .page-link {
+
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #1e1e1e;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+</style>
 <!-- Include Font Awesome CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <!-- Additional CSS Files -->
